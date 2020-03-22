@@ -7,9 +7,9 @@
 	<version>0.0.1-SNAPSHOT</version>
 	<packaging>pom</packaging>
 
-	<name>Alpha</name>
+	<name>Software Engineering in Practise</name>
 	<description>
-  		This project is about learning how to use Maven.
+  		This project is dedicated to the needs of the course Software Engineering in Practice.
     </description>
 
 	<properties>
