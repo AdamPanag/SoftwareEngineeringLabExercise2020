@@ -18,7 +18,6 @@ import org.jfree.data.xy.XYSeriesCollection;
  *         in each line.
  * @since March 2020 
  */
-
 public class HistogramGenerator {
 		
 	/***
@@ -90,19 +89,15 @@ public class HistogramGenerator {
 		ChartFrame frame = new ChartFrame("First", chart);
 		frame.pack();
 		// makes the previously created frame visible
-		frame.setVisible(true);
-		
+		frame.setVisible(true);		
 	}
-	
-	
+		
 	public static void main(String[] args) {
 		
 		String path = args[0]; // get the path from the command line
 		
 		HistogramGenerator demo = new HistogramGenerator();
 		int[] gradeFrequency = demo.readGrades(path);
-		demo.generateHistogram(gradeFrequency);
-		
-	}
-	
+		demo.generateHistogram(gradeFrequency);		
+	}	
 }
