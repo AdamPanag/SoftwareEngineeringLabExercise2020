@@ -15,7 +15,7 @@ Go to the root directory of the repository and execute the following command in 
 ```
 mvn package
 ```
-This command generates a jar file in each modules' target directory.
+This command generates a jar file in each module's target directory.
 
 ## Run
 Go to the directory "target" that exists in every module and execute the following command:
