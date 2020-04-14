@@ -4,8 +4,9 @@ This repository is for the course Software Engineering in Practice of the DMST o
 
 ## Project Structure
 
-This repository consists of a Maven project and one module.
+This repository consists of a Maven project with two modules.
 1) [Histogram Generator](gradeshistogram) - receives a .txt file with grades and generates a histogram
+2) [Unit Testing](unittesting) - makes unit tests
 
 ## Install
 You must clone the repository and install maven to your computer [maven-installation](https://mkyong.com/maven/how-to-install-maven-in-windows/)
