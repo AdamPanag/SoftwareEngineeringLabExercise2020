@@ -81,5 +81,16 @@ public class ArithmeticOperationsTest {
 		ao.multiply(-7, 3);			
 	}
 	
+	/*
+	 * A unit test that checks if the multiplication with the second argument
+	 * as a negative number, will throw an IllegalArgumentException and will
+	 * print the right exception message.
+	 */
+	@Test
+	public void testMultiplyWithYNegative() {
+		thrown.expect(IllegalArgumentException.class);
+		thrown.expectMessage("x & y should be >= 0");
+		ao.multiply(7, -3);	
+	}
 	
 }
