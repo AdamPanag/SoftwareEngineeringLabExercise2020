@@ -49,10 +49,20 @@ public class ArithmeticOperationsTest {
 	
 	/*
 	 * A unit test that checks if the division with zero, will
-	 * throw an ArithmeticException
+	 * throw an ArithmeticException.
 	 */
 	@Test (expected = ArithmeticException.class)
 	public void testDivideWithZero() {
 		Assert.assertEquals(0, ao.divide(10, 0), 0.000001);
 	}
+	
+	/*
+	 * A unit test that checks the multiplication of two positive integers.
+	 */
+	@Test
+	public void testMultiply() {
+		Assert.assertEquals(21, ao.multiply(7, 3));
+	}
+	
+	
 }
