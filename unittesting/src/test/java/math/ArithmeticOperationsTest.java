@@ -93,4 +93,15 @@ public class ArithmeticOperationsTest {
 		ao.multiply(7, -3);	
 	}
 	
+	/*
+	 * A unit test that checks if an IllegalArgumentException is thrown with the
+	 * right message, when the result if the multiplication exceed the maximum
+	 * Integer.
+	 */
+	@Test
+	public void testMultiplyMaxInt() {
+		thrown.expect(IllegalArgumentException.class);
+		thrown.expectMessage("The product does not fit in an Integer variable");
+		ao.multiply(1147483647, 2);	
+	}
 }
