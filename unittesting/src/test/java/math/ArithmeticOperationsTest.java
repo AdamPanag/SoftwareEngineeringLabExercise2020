@@ -19,7 +19,7 @@ public class ArithmeticOperationsTest {
 	 */
 	@Test
 	public void testDividePositiveNumbers() {
-		Assert.assertEquals(8.75, ao.divide(35, 4), 0.000001);
+		Assert.assertEquals(2.3, ao.divide(16.56, 7.2), 0.000001);
 	}
 	
 	/*
