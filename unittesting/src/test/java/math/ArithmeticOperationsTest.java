@@ -21,4 +21,12 @@ public class ArithmeticOperationsTest {
 	public void testDividePositiveNumbers() {
 		Assert.assertEquals(8.75, ao.divide(35, 4), 0.000001);
 	}
+	
+	/*
+	 * A unit test that checks the division of two negative numbers.
+	 */
+	@Test
+	public void testDivideNegativeNumbers() {
+		Assert.assertEquals(7.6, ao.divide(-38, -5), 0.000001);
+	}
 }
