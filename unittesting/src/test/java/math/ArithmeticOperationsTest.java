@@ -37,4 +37,13 @@ public class ArithmeticOperationsTest {
 	public void testDividePosWithNegNumber() {
 		Assert.assertEquals(-8.75, ao.divide(35, -4), 0.000001);
 	}
+	
+	/*
+	 * A unit test that checks the division of two positive numbers 
+	 * that their devision is incomplete.
+	 */
+	@Test
+	public void testDivideIncomplete() {
+		Assert.assertEquals(3.3333333, ao.divide(10, 3), 0.000001);
+	}
 }
