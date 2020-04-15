@@ -46,4 +46,13 @@ public class ArithmeticOperationsTest {
 	public void testDivideIncomplete() {
 		Assert.assertEquals(3.3333333, ao.divide(10, 3), 0.000001);
 	}
+	
+	/*
+	 * A unit test that checks if the division with zero, will
+	 * throw an ArithmeticException
+	 */
+	@Test (expected = ArithmeticException.class)
+	public void testDivideWithZero() {
+		Assert.assertEquals(0, ao.divide(10, 0), 0.000001);
+	}
 }
