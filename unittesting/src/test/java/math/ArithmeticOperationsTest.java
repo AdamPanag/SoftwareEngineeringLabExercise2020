@@ -2,6 +2,8 @@ package math;
 
 import org.junit.Assert;
 import org.junit.Test;
+import org.junit.rules.ExpectedException;
+import org.junit.Rule;
 
 /**
  * A class that that provides test cases for the
@@ -62,6 +64,21 @@ public class ArithmeticOperationsTest {
 	@Test
 	public void testMultiply() {
 		Assert.assertEquals(21, ao.multiply(7, 3));
+	}
+	
+	@Rule
+	public ExpectedException thrown = ExpectedException.none();
+	
+	/*
+	 * A unit test that checks if the multiplication with the first argument
+	 * as a negative number, will throw an IllegalArgumentException and will
+	 * print the right exception message.
+	 */
+	@Test
+	public void testMultiplyWithXNegative() {
+		thrown.expect(IllegalArgumentException.class);
+		thrown.expectMessage("x & y should be >= 0");
+		ao.multiply(-7, 3);			
 	}
 	
 	
