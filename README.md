@@ -1,5 +1,6 @@
 # iCode
-
+[![Build Status](https://travis-ci.com/AdamPanag/iCode.svg?token=TFZa7qgmi3yxuWQ8eYkt&branch=development)](https://travis-ci.com/AdamPanag/iCode)
+## Overview
 This repository is for the course Software Engineering in Practice of the DMST of AUEB.
 
 ## Project Structure
