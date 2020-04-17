@@ -20,12 +20,27 @@ public class FileIOTest {
 	String filepath;
 	
 	/*
-	 * A unit test for the method readFile with am appropriate file
-	 * as an input.
+	 * A unit test for the method readFile with an appropriate file
+	 * as an argument.
 	 */
 	@Test
 	public void testReadFile() {
 		filepath = "src/test/resources/normal_case.txt";
 		Assert.assertArrayEquals(new int[] {2, 6, 5, 9, 7354, 12}, fio.readFile(filepath));
 	}
+	
+	@Rule
+	public ExpectedException thrown = ExpectedException.none();
+	
+	/*
+	 * A unit test for the method readFile with a file, that
+	 * does not a exist, as an argument.
+	 */
+	@Test
+	public void testReadFileWhenFileDoesntExist() {
+		thrown.expect(IllegalArgumentException.class);
+		thrown.expectMessage("Input file does not exist");
+		filepath = "src/test/resources/no_file.txt";
+		fio.readFile(filepath);
+	}	
 }
