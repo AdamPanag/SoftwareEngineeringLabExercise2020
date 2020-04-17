@@ -53,5 +53,11 @@ public class FileIOTest {
 		thrown.expectMessage("Given file is empty");
 		filepath = "src/test/resources/empty.txt";
 		fio.readFile(filepath);
-	}	
+	}
+	
+	@Test
+	public void testReadFileContainsInvalidEntries() {
+		filepath = "src/test/resources/invalid_entries.txt";
+		Assert.assertArrayEquals(new int[] {1, 2, 3}, fio.readFile(filepath));		
+	}
 }
