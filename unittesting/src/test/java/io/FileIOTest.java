@@ -5,7 +5,6 @@ import org.junit.Test;
 import org.junit.rules.ExpectedException;
 import org.junit.Rule;
 
-
 /**
  * A class that that provides test cases 
  * for the operations of the FileIO
@@ -25,7 +24,7 @@ public class FileIOTest {
 	@Test
 	public void testReadFile() {
 		filepath = "src/test/resources/normal_case.txt";
-		Assert.assertArrayEquals(new int[] {2, 6, 5, 9, 7354, 12}, fio.readFile(filepath));
+		Assert.assertArrayEquals(new int[] {2, 6, 5, -50, 9, 7354, 12}, fio.readFile(filepath));
 	}
 	
 	@Rule
@@ -55,6 +54,10 @@ public class FileIOTest {
 		fio.readFile(filepath);
 	}
 	
+	/*
+	 * A unit test for the method readFile with a file
+	 * that contains invalid entries, such as String and Double.
+	 */
 	@Test
 	public void testReadFileContainsInvalidEntries() {
 		filepath = "src/test/resources/invalid_entries.txt";
