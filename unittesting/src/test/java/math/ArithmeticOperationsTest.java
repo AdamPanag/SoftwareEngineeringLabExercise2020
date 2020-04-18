@@ -105,6 +105,10 @@ public class ArithmeticOperationsTest {
 		ao.multiply(1147483647, 2);	
 	}
 	
+	/*
+	 * A unit test that checks the behavior of the method multiply
+	 * when zero is given as an argument.
+	 */
 	@Test
 	public void testMultiplyWithZero() {
 		Assert.assertEquals(0, ao.multiply(7, 0));

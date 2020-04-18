@@ -23,7 +23,6 @@ public class ArithmeticOperations {
 		return numerator/denominator;
 	}
 	
-	
 	/**
 	 * Performs the basic arithmetic operation of multiplication 
 	 * between two positive Integers
@@ -43,7 +42,5 @@ public class ArithmeticOperations {
 		} else {
 			throw new IllegalArgumentException("The product does not fit in an Integer variable");		
 		}
-	}
-	
-	
+	}		
 }

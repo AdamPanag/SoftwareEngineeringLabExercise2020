@@ -34,5 +34,4 @@ public class ArrayOperations {
 		}
 		return primeNums.stream().mapToInt(i -> i).toArray();
 	}
-
 }
