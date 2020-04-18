@@ -31,12 +31,7 @@ public class ArrayOperations {
 				primeNums.add(n);
 			}
 		}
-		String[] stringNums = primeNums.stream().toArray(String[]::new); //stores the prime numbers in a String[]
-		int[] intNums = new int[stringNums.length];
-		for (int i=0 ; i < stringNums.length; i++) {
-			intNums[i] = Integer.parseInt(stringNums[i]);
-		}
-		return intNums;
+		return primeNums.stream().mapToInt(i -> i).toArray();
 	}
 
 }
