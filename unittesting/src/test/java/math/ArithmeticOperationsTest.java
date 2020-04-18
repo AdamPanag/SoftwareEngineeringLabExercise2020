@@ -104,4 +104,9 @@ public class ArithmeticOperationsTest {
 		thrown.expectMessage("The product does not fit in an Integer variable");
 		ao.multiply(1147483647, 2);	
 	}
+	
+	@Test
+	public void testMultiplyWithZero() {
+		Assert.assertEquals(0, ao.multiply(7, 0));
+	}
 }
