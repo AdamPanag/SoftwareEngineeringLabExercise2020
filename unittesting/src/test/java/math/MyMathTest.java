@@ -42,4 +42,16 @@ public class MyMathTest {
 		thrown.expectMessage("Cannot count the factorial of values below 0 or above 12.");
 		mm.factorial(13);
 	}
+	
+	/*
+	 * A unit test that checks that the method isPrime throws
+	 * the right exception and message when the argument is
+	 * a number lower than 2.
+	 */
+	@Test
+	public void testIsPrimeException() {
+		thrown.expect(IllegalArgumentException.class);
+		thrown.expectMessage("The given number must be greater than 1.");
+		mm.isPrime(-1);
+	}
 }
