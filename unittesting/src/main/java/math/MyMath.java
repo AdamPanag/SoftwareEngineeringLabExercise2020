@@ -8,9 +8,13 @@ package math;
  */
 public class MyMath {
 	
-	/*
+	/**
 	 * Calculates the factorial of an integer between 0 and 12.
 	 * If it exceeds these bounds, it will throw an IllegalArgumentException.
+	 * 
+	 * @param n an integer
+	 * @return the factorial of n
+	 * @exception IllegalArgumentException when <b>n</b> is negative or greater than 12
 	 */
 	public int factorial(int n) {
 		if (n >= 0 && n <= 12) {
@@ -24,10 +28,13 @@ public class MyMath {
 		}
 	}
 	
-	/*
+	/**
 	 * Return true if the argument is a prime number and false
 	 * if it is not. Also, if the given number is below 2, it
 	 * will throw an IllegalArgumentException.
+	 * 
+	 * @param n the integer that we want to see if it is prime
+	 * @return true if prime, false if not prime
 	 */
 	public boolean isPrime(int n) {
 		if (n >= 2) {

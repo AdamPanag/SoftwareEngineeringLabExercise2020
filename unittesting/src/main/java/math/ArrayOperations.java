@@ -20,6 +20,7 @@ public class ArrayOperations {
 	 * @param fileIo the FileIO instance
 	 * @param filepath the relative path of the file
 	 * @param fileIo the FileIO instance
+	 * @return an Integer array that contains only prime numbers
 	 */
 	int[] findPrimesInFile(FileIO fileIo, String filepath, MyMath myMath) {
 		
