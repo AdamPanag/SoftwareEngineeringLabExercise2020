@@ -54,8 +54,17 @@ public class ArithmeticOperationsTest {
 	 * throw an ArithmeticException.
 	 */
 	@Test (expected = ArithmeticException.class)
-	public void testDivideWithZero() {
+	public void testDivideWithZeroDenominator() {
 		Assert.assertEquals(0, ao.divide(10, 0), 0.000001);
+	}
+	
+	/*
+	 * A unit test that checks if the result of the division
+	 * equals to zero when the numerator is zero.
+	 */
+	@Test
+	public void testDivideWithZeroNumerator() {
+		Assert.assertEquals(0, ao.divide(0, 10), 0.000001);
 	}
 	
 	/*
