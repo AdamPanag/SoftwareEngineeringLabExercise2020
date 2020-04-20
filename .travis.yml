@@ -1,0 +1,18 @@
+anguage: java
+
+jdk:
+  - openjdk8
+
+branches:
+  only:
+  - master
+  - development
+
+before_script: 
+  - ls -la # this command just prints the contents of the current working directory.
+
+script: 
+  - mvn clean package jacoco:report
+
+after_success:
+- echo "Hello my friend!"
