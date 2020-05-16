@@ -1,8 +1,6 @@
 package demo;
 
 import java.io.IOException;
-import java.util.HashMap;
-import java.util.Map;
 
 import codeanalyzer.*;
 
@@ -25,19 +23,14 @@ public class DemoClient {
 			System.out.println("Incorrect number of arguments.");
 			System.exit(1);
 		}
-
-		SourceCodeAnalyzer analyzer = new SourceCodeAnalyzer(sourceFileLocation);
-		int loc = analyzer.calculateLOC(filepath, sourceCodeAnalyzerType);
-		int nom = analyzer.calculateNOM(filepath, sourceCodeAnalyzerType);
-		int noc = analyzer.calculateNOC(filepath, sourceCodeAnalyzerType);
 		
-		Map<String, Integer> metrics = new HashMap<>();
-		metrics.put("loc",loc);
-		metrics.put("nom",nom);
-		metrics.put("noc",noc);
-				
-		MetricsExporter exporter = new MetricsExporter();
-		exporter.writeFile(outputFileType, metrics, outputFilePath);
+		/*
+		* The client needs to give values only to these five (5) variables.
+		* That gives us the opportunity to make changes,
+		* without affecting the client's usage of the 'library'
+		*/
+		Facade facade = new Facade();
+		facade.startApplication(filepath, sourceCodeAnalyzerType, sourceFileLocation, 
+				outputFilePath, outputFileType);
 	}
-
 }
