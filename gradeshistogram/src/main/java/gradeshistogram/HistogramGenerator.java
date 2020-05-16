@@ -39,6 +39,7 @@ public class HistogramGenerator {
 		    while ((line = br.readLine()) != null) { // read each line
 		    	gradeFrequency[Integer.parseInt(line)]++; // update the frequency
 		    }
+		    br.close();
 		} catch (IOException e) {
 			System.err.format("IOException: %s%n", e);
 		}

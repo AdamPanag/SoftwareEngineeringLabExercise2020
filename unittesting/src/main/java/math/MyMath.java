@@ -28,6 +28,18 @@ public class MyMath {
 		}
 	}
 	
+	public int factorialMaxInt(int n) {
+		if (n >= 0 && n <= 20) {
+			if (n == 0) {
+				return 1;
+			} else {
+				return n * factorial(n-1);
+			}
+		} else {
+			throw new IllegalArgumentException("Cannot count the factorial of values below 0 or above 12.");
+		}
+	}
+	
 	/**
 	 * Return true if the argument is a prime number and false
 	 * if it is not. Also, if the given number is below 2, it

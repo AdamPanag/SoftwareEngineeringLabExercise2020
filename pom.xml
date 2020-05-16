@@ -55,5 +55,6 @@
 	<modules>
 		<module>gradeshistogram</module>
 		<module>unittesting</module>
+		<module>source_code_analyzer</module>
 	</modules>
 </project>
