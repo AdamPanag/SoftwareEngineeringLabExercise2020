@@ -37,9 +37,4 @@ public class CsvWriterTest {
 		// delete the generated file
 		outputFile.delete();
 	}
-	
-//	@Test(expected = IllegalArgumentException.class)
-//	public void testWriteFileWithUknownFIleType() {
-//		mex.writeFile("non-existing-type", null, null);
-//	}
 }
