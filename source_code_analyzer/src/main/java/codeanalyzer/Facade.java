@@ -5,31 +5,30 @@ import java.util.HashMap;
 import java.util.Map;
 
 /**
- * Hides the functionality of the library from the user. 
+ * Hides the functionality of the library from the user.
+ * Receives all the necessary data from the user and does
+ * all the actions needed to analyze the source code and
+ * export it.
  * @author agkortzis, AdamPanag
  *
  */
 public class Facade {
 	
 	/**
-	 * Reads a Java source code file, calculates the metrics and exports them
+	 * Reads a Java source code file, calculates the metrics and exports them.
 	 */
 	public void startApplication(String filepath, String sourceCodeAnalyzerType, String sourceFileLocation, 
 			String outputFilePath, String outputFileType) throws IOException {
-
-		SourceCodeAnalyzer analyzer = new SourceCodeAnalyzer(sourceFileLocation);
-		int loc = analyzer.calculateLOC(filepath, sourceCodeAnalyzerType);
-		int nom = analyzer.calculateNOM(filepath, sourceCodeAnalyzerType);
-		int noc = analyzer.calculateNOC(filepath, sourceCodeAnalyzerType);
 		
 		Map<String, Integer> metrics = new HashMap<>();
-		metrics.put("loc",loc);
-		metrics.put("nom",nom);
-		metrics.put("noc",noc);
+		SourceCodeAnalyzerManagementSystem scams = new SourceCodeAnalyzerManagementSystem();
 		
+		SourceCodeAnalyzer analyzer = scams.createSourceCodeAnalyzerObject(sourceCodeAnalyzerType);
+		metrics = scams.analyzeSourceCode(analyzer, sourceFileLocation, filepath); //calculate metrics
+
 		MetricsExporterFactory mef = new MetricsExporterFactory();
 		MetricsExporter exporter = mef.createMetricsExporter(outputFileType);
 		
-		exporter.writeFile(metrics, outputFilePath);
+		exporter.writeFile(metrics, outputFilePath); //export metrics
 	}
 }
