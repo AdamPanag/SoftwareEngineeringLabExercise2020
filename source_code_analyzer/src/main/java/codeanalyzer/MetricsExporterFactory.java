@@ -17,7 +17,7 @@ public class MetricsExporterFactory {
 		} else if (outputType.equals("json")) {
 			exporter = new JsonWriter();
 		} else {
-			throw new IllegalArgumentException("Unknown type : " + outputType);
+			throw new IllegalArgumentException("Unknown output type : " + outputType);
 		}
 		
 		return exporter;
