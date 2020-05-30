@@ -30,7 +30,7 @@ public class DemoClient {
 		* without affecting the client's usage of the 'library'
 		*/
 		Facade facade = new Facade();
-		facade.startApplication(filepath, sourceCodeAnalyzerType, sourceFileLocation, 
+		facade.analyzeSourceCode(filepath, sourceCodeAnalyzerType, sourceFileLocation, 
 				outputFilePath, outputFileType);
 	}
 }

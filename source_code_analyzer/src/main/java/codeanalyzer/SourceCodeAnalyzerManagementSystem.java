@@ -40,7 +40,7 @@ public class SourceCodeAnalyzerManagementSystem {
 	 * @return a Map<String, Integer> with the name and the value of each metric
 	 * @throws IOException
 	 */
-	public Map<String, Integer> analyzeSourceCode(SourceCodeAnalyzer analyzer, String fileReaderType, String filepath) throws IOException{
+	public Map<String, Integer> calculateMetrics(SourceCodeAnalyzer analyzer, String fileReaderType, String filepath) throws IOException{
 		
 		this.fileReader = sfrf.createSourceFileReader(fileReaderType);
 		Map<String, Integer> metrics = new HashMap<>();

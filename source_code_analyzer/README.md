@@ -24,7 +24,7 @@ This software is redesinged in order to implement some of the good design patter
 * Bridge
 
 ### Facade
-Thare is a class named Facade that hides all the functionality of the system from the user. It creates all the necessary objects and calls the right methods. So, the user has just to give 5 values as parameters to the method startApplication of the class Facade. This makes the usage of the system very easy to the end user, because he/she does not need to know how the system works.
+Thare is a class named Facade that hides all the functionality of the system from the user. It creates all the necessary objects and calls the right methods. So, the user has just to give 5 values as parameters to the method analyzeSourceCode of the class Facade. This makes the usage of the system very easy to the end user, because he/she does not need to know how the system works.
 
 ### Factory on Strategy
 This design pattern is used two times, one with the classes SourceFileReaderFactory, SourceFileReader, LocalFileReader and WebFileReader and one with the classes MetricsExporterFactory MetricsExporter, CsvWriter and JsonWriter. At the moment we use only two types of source file reader (web, local) and only two types of metrics exporter (csv, json). But with this design pattern we can easily add a third one to both of these cases. So this design pattern gives extensibility. The Factory classes  (SourceFileReaderFactory, MetricsExporterFactory) are responsible for creating the right object depending on which type of source file reader and metrics exporter the user wants to use.

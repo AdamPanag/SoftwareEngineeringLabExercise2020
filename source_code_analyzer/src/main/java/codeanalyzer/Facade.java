@@ -17,14 +17,14 @@ public class Facade {
 	/**
 	 * Reads a Java source code file, calculates the metrics and exports them.
 	 */
-	public void startApplication(String filepath, String sourceCodeAnalyzerType, String sourceFileLocation, 
+	public void analyzeSourceCode(String filepath, String sourceCodeAnalyzerType, String sourceFileLocation, 
 			String outputFilePath, String outputFileType) throws IOException {
 		
 		Map<String, Integer> metrics = new HashMap<>();
 		SourceCodeAnalyzerManagementSystem scams = new SourceCodeAnalyzerManagementSystem();
 		
 		SourceCodeAnalyzer analyzer = scams.createSourceCodeAnalyzerObject(sourceCodeAnalyzerType);
-		metrics = scams.analyzeSourceCode(analyzer, sourceFileLocation, filepath); //calculate metrics
+		metrics = scams.calculateMetrics(analyzer, sourceFileLocation, filepath); //calculate metrics
 
 		MetricsExporterFactory mef = new MetricsExporterFactory();
 		MetricsExporter exporter = mef.createMetricsExporter(outputFileType);
