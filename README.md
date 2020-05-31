@@ -1,10 +1,10 @@
 # iCode
-[![Build Status](https://travis-ci.com/AdamPanag/iCode.svg?token=TFZa7qgmi3yxuWQ8eYkt&branch=development)](https://travis-ci.com/AdamPanag/iCode)
+[![Build Status](https://travis-ci.com/AdamPanag/iCode.svg?token=TFZa7qgmi3yxuWQ8eYkt&branch=master)](https://travis-ci.com/AdamPanag/iCode)
+
 ## Overview
 This project is created for the needs of the course Software Engineering in Practice of the DMST of AUEB.
 
 ## Project Structure
-
 This repository consists of a Maven project with two modules.
 1) [Histogram Generator](gradeshistogram) - receives a .txt file with grades and generates a histogram.
 2) [Unit Testing](unittesting) - includes classes that do certain operations and tests all the functions of these classes.
@@ -55,5 +55,4 @@ java -jar gradeshistogram-0.0.1-SNAPSHOT-jar-with-dependencies.jar "path\of\file
 
 ### Authors
 * [Adam Panagiotidis](https://github.com/AdamPanag)
-
 * [Antonios Gkortzis](https://github.com/AntonisGkortzis)
