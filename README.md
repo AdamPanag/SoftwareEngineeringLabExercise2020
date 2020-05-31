@@ -54,5 +54,6 @@ java -jar gradeshistogram-0.0.1-SNAPSHOT-jar-with-dependencies.jar "path\of\file
 ```
 
 ### Authors
-[Adam Panagiotidis](https://github.com/AdamPanag)
-[Antonios Gkortzis](https://github.com/AntonisGkortzis)
+* [Adam Panagiotidis](https://github.com/AdamPanag)
+
+* [Antonios Gkortzis](https://github.com/AntonisGkortzis)
