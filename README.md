@@ -8,6 +8,7 @@ This project is created for the needs of the course Software Engineering in Prac
 This repository consists of a Maven project with two modules.
 1) [Histogram Generator](gradeshistogram) - receives a .txt file with grades and generates a histogram.
 2) [Unit Testing](unittesting) - includes classes that do certain operations and tests all the functions of these classes.
+3) [Source Code Analyzer](source_code_analyzer) - reads a Java source code file that is stored locally or on the web, calculates the LOC, NOM and NOC metrics and exports these metrics to an output file.
 
 ## Requirements
 This project requires:
@@ -53,4 +54,5 @@ java -jar gradeshistogram-0.0.1-SNAPSHOT-jar-with-dependencies.jar "path\of\file
 ```
 
 ### Authors
-[Adam Panagiotidis](https://github.com/AdamPanag)
+* [Adam Panagiotidis](https://github.com/AdamPanag)
+* [Antonios Gkortzis](https://github.com/AntonisGkortzis)

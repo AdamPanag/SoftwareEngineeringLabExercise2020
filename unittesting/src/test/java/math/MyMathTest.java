@@ -2,6 +2,7 @@ package math;
 
 import org.junit.Test;
 import org.junit.rules.ExpectedException;
+import org.junit.Assert;
 import org.junit.Rule;
 
 /**
@@ -53,4 +54,9 @@ public class MyMathTest {
 		thrown.expectMessage("The given number must be greater than 1.");
 		mm.isPrime(-1);
 	}
+	
+//	@Test
+//	public void testFactorialMaxInt() {
+//		Assert.assertEquals(243290200817664000, mm.factorialMaxInt(20));
+//	}
 }
