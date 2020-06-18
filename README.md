@@ -1,5 +1,5 @@
-# iCode
-[![Build Status](https://travis-ci.com/AdamPanag/iCode.svg?token=TFZa7qgmi3yxuWQ8eYkt&branch=master)](https://travis-ci.com/AdamPanag/iCode)
+# SoftwareEngineeringLabExercise2020
+[![Build Status](https://travis-ci.com/AdamPanag/SoftwareEngineeringLabExercise2020.svg?branch=development)](https://travis-ci.com/AdamPanag/SoftwareEngineeringLabExercise2020)
 
 ## Overview
 This project is created for the needs of the course Software Engineering in Practice of the DMST of AUEB.
